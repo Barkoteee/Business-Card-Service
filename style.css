@@ -1,0 +1,541 @@
+/* ==========================================
+   RESET & GLOBAL LUXURY TYPOGRAPHY
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Architectural Light Minimalist Palette */
+    --bg-gradient: linear-gradient(180deg, #F9F9F8 0%, #F3F3F1 100%);
+    --color-dark: #111111;
+    --color-muted: #666666;
+    --color-accent: #C5A880; /* Champagne Gold */
+    --color-accent-light: #FDFBF7;
+    --border-subtle: rgba(17, 17, 17, 0.08);
+    
+    --max-width: 1300px;
+    --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--color-dark);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================
+   STRUCTURE & LAYOUT
+   ========================================== */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+section {
+    padding: 10rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* Editorial Header Styles */
+.section-header-editorial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 6rem;
+    align-items: end;
+}
+
+.section-header-editorial h2 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    text-transform: lowercase;
+    line-height: 1;
+}
+
+.section-header-editorial p {
+    color: var(--color-muted);
+    font-size: 1.25rem;
+    font-weight: 400;
+    max-width: 460px;
+}
+
+/* ==========================================
+   ELEGANT NAVIGATION
+   ========================================== */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(249, 249, 248, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+.logo span {
+    color: var(--color-accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 3.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: var(--transition-smooth);
+}
+
+.nav-links a:hover {
+    color: var(--color-dark);
+}
+
+/* ==========================================
+   PREMIUM BUTTONS & CONTACT MODIFICATIONS
+   ========================================== */
+.btn-group {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.btn-editorial {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    border-radius: 4px;
+}
+
+.btn-dark {
+    background-color: var(--color-dark);
+    color: #FFFFFF;
+    border: 1px solid var(--color-dark);
+}
+
+.btn-dark:hover {
+    background-color: transparent;
+    color: var(--color-dark);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-dark);
+    border: 1px solid var(--border-subtle);
+}
+
+.btn-outline:hover {
+    border-color: var(--color-dark);
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.editorial-links-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+}
+
+.editorial-links-stack .btn-editorial {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* ==========================================
+   HERO (ASYMMETRICAL GALLERY STYLE)
+   ========================================== */
+.hero-editorial {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 6rem;
+    align-items: center;
+    min-height: 70vh;
+    padding-top: 6rem;
+}
+
+.hero-editorial h1 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    margin-bottom: 2rem;
+}
+
+.hero-editorial p {
+    font-size: 1.35rem;
+    color: var(--color-muted);
+    margin-bottom: 3.5rem;
+    max-width: 500px;
+    font-weight: 300;
+}
+
+.hero-frame {
+    background-color: #FFFFFF;
+    padding: 4rem;
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.02);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.hero-card-asset {
+    width: 100%;
+    aspect-ratio: 1.75;
+    background: #FDFBF7;
+    border: 1px solid var(--color-accent);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.hero-card-asset .brand-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.hero-card-asset .brand-sub {
+    font-size: 0.7rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+/* ==========================================
+   ABOUT SECTION (GRID SYSTEM)
+   ========================================== */
+.about-studio-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 8rem;
+}
+
+.philosophy-text h3 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+.philosophy-text p {
+    color: var(--color-muted);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.stats-editorial-box {
+    border-left: 1px solid var(--border-subtle);
+    padding-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.5rem;
+}
+
+.stat-item .num {
+    font-size: 3.5rem;
+    font-weight: 200;
+    color: var(--color-accent);
+    line-height: 1;
+}
+
+.stat-item .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-muted);
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+   PORTFOLIO (IMAGE INJECTIONS)
+   ========================================== */
+.portfolio-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.work-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.work-canvas {
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-subtle);
+    aspect-ratio: 16/11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: var(--transition-smooth);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: var(--transition-smooth);
+}
+
+.work-card:hover .work-canvas {
+    background-color: var(--color-accent-light);
+    border-color: var(--color-accent);
+}
+
+.work-card:hover .portfolio-img {
+    transform: scale(1.04);
+}
+
+.work-title-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.work-title-block h3 {
+    font-size: 1.35rem;
+    font-weight: 400;
+}
+
+.work-title-block p {
+    color: var(--color-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ==========================================
+   CAPABILITIES (CLEAN LIST COLUMNS)
+   ========================================== */
+.capabilities-list-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem;
+}
+
+.capability-row {
+    background: #FFFFFF;
+    border: 1px solid var(--border-subtle);
+    padding: 4rem 2.5rem;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+}
+
+.capability-row:hover {
+    border-color: var(--color-dark);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.02);
+}
+
+.capability-num {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.capability-row h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+.capability-row p {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   METHODOLOGY (HORIZONTAL STEPS)
+   ========================================== */
+.process-row-flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+}
+
+.step-module {
+    border-top: 1px solid var(--color-dark);
+    padding-top: 1.5rem;
+}
+
+.step-meta {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.step-module h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.step-module p {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   CONTACT & MINIMAL FORM
+   ========================================== */
+.contact-split-view {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 8rem;
+}
+
+.contact-editorial-info h2 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.contact-editorial-info p {
+    color: var(--color-muted);
+    font-size: 1.15rem;
+    margin-bottom: 4rem;
+}
+
+/* Minimalistic Form Style */
+.editorial-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-wrapper label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-muted);
+    font-weight: 700;
+}
+
+.field-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--color-dark);
+    padding: 1rem 0;
+    font-size: 1.05rem;
+    transition: var(--transition-smooth);
+}
+
+.field-input:focus {
+    outline: none;
+    border-bottom-color: var(--color-dark);
+}
+
+textarea.field-input {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+    border-top: 1px solid var(--border-subtle);
+    padding: 4rem 0;
+    background-color: #FFFFFF;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-flex p {
+    color: var(--color-muted);
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   RESPONSIVE RE-ALIGNMENTS
+   ========================================== */
+@media (max-width: 992px) {
+    .section-header-editorial, .hero-editorial, .about-studio-grid, .portfolio-gallery-grid, .capabilities-list-grid, .process-row-flow, .contact-split-view {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    section { padding: 6rem 0; }
+    .hero-editorial h1 { font-size: 3.2rem; }
+    .stats-editorial-box { border-left: none; padding-left: 0; flex-direction: row; justify-content: space-between; }
+}
